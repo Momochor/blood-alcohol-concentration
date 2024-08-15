@@ -5,15 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blood Alcohol Calculator</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styling.css">
 
 </head>
 
 <body>
   <div class="container">
     <h2>Blood Alcohol Concentration Calculator</h2>
-    <form action="calculate_bac.php" method="POST">
-      <label for="weight">Weight:</label>
+    <form action="bac_calculate.php" method="GET">
+      <label for="weight">Weight: </label>
       <input type="number" id="weight" name="weight" placeholder="Enter your weight" required>
 
       <label for="unit">Weight Unit:</label>
@@ -36,7 +36,7 @@
         required>
 
       <label for="time_elapsed">Time Elapsed (hours):</label>
-      <input type="number" id="time_elapsed" name="time_elapsed" placeholder="Enter time elapsed since drinking started"
+      <input type="number" id="time_elapsed" name="time_elapsed" placeholder="Enter time elapsed since you started drinking"
         required>
 
       <button type="submit">Calculate BAC</button>

@@ -20,11 +20,7 @@
     //bac calculate garne formula
     $BAC = (($alcohol_consumed * 5.14) / ($weight * $gender_constant)) - 0.015 * $time_elapsed;
 
-    echo $BAC; 
-    echo "<br>";
-    if($BAC>=0.08){
-        echo "OH BETE MOJ KARDI, OH BETE MOJ KARDI💀💀💀";
-    }else{
-        echo "Samajh re ho? 😏";
-    }
+    session_start();
+    $_SESSION['BAC']=$BAC;
+    header("Location:/index.php");
 ?>
